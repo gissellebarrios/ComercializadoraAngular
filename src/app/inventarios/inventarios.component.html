@@ -1,0 +1,27 @@
+<div>
+    <h2>Inventario</h2>
+    <button (click)>"Abrir Formulario">Agregar Productos</button>
+    <table>
+        <thead>
+            <tr>
+             <th>ID</th>
+             <th>Nombre</th>
+             <th>Cantidad</th>
+             <th>Precio</th>
+             <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let producto of productos ">
+             <td>{{producto.id}}</td>
+             <td>{{producto.nombre}}</td>
+             <td>{{producto.cantidad}}</td>
+             <td>{{producto.precio}}</td>
+             <td>
+                <button (click) = "editarProductos(producto)">Editar</button>
+                <button (click) = "eliminarProductos(producto)">Eliminar</button>
+             </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
